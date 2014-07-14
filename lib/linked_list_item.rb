@@ -2,7 +2,7 @@ class LinkedListItem
   include Comparable
 
   attr_reader :next_item
-  attr_reader :payload
+  attr_accessor :payload
 
   def initialize(payload)
     @payload = payload
@@ -13,7 +13,7 @@ class LinkedListItem
   end
 
   def <=>(other)
-    
+
     if self.payload.class == other.payload.class
       self.payload <=> other.payload
     else
